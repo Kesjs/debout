@@ -22,8 +22,14 @@ export default function FaireUnDonPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-20 bg-[#1a5c2a] overflow-hidden">
-        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "radial-gradient(circle at 2px 2px, white 1px, transparent 0)", backgroundSize: "32px 32px" }} />
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('https://afriveille.com/wp-content/uploads/2020/04/hands-people-friends-communication-45842-1000x600.jpg')",
+          }}
+        />
+        <div className="absolute inset-0 bg-[#1a5c2a]/75" />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
             <span className="inline-block text-[#f5a623] text-sm font-semibold tracking-widest uppercase mb-4">

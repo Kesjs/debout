@@ -71,14 +71,6 @@ export default function Footer() {
               })}
               <li>
                 <Link
-                  href="/evenements"
-                  className="text-sm text-white/60 hover:text-[#f5a623] transition-colors duration-150"
-                >
-                  Événements
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/faire-un-don"
                   className="text-sm text-white/60 hover:text-[#f5a623] transition-colors duration-150"
                 >
