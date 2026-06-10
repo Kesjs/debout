@@ -3,23 +3,23 @@ import Image from "next/image";
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import { SITE_CONFIG, NAV_ITEMS } from "@/lib/constants";
 
-// Icône Instagram SVG — fidèle à l'original
-function InstagramIcon({ size = 18 }: { size?: number }) {
+function InstagramIcon({ size = 18, strokeWidth = 1.75 }: { size?: number; strokeWidth?: number }) {
   return (
     <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
       width={size}
       height={size}
-      viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.75"
+      strokeWidth={strokeWidth}
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
     >
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-      <circle cx="12" cy="12" r="4" />
-      <circle cx="17.5" cy="6.5" r="0.75" fill="currentColor" stroke="none" />
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8A4 4 0 0 1 16 11.37" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" strokeWidth={2.5} />
     </svg>
   );
 }
