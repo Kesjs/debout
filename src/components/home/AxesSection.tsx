@@ -20,10 +20,8 @@ export default function AxesSection() {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          // Jeunes en formation, contexte éducatif africain
         backgroundImage:
-            // Salle de classe / éducation africaine
-            "url('https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1920&q=80')",
+            "url('https://res.cloudinary.com/tearfund/image/fetch/c_scale,w_1248/f_auto/https://www.tearfund.org/-/media/tearfund/images/stories/2022/08/stories-of-hope-in-rwanda/storiesofhopeinrwanda-storybanner-creditchrishoskinstearfund.jpg')",
         }}
       />
       <div className="absolute inset-0 bg-[#1a5c2a]/85" />

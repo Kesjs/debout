@@ -55,7 +55,7 @@ export default function ArtisanSection() {
           <AnimatedSection direction="right" delay={0.15} className="relative">
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
               <Image
-                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80"
+                src="https://images.pexels.com/photos/15171980/pexels-photo-15171980.jpeg"
                 alt="Jeunes en formation numérique — Programme Artisan Numérique de BÉNIN DEBOUT"
                 fill
                 className="object-cover"

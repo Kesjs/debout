@@ -21,7 +21,7 @@ export default function HumanitaireSection() {
           <AnimatedSection direction="left" className="relative">
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
               <Image
-                src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=800&q=80"
+                src="https://media.istockphoto.com/id/537311780/photo/unity-of-indian-children-asia.jpg?s=1024x1024&w=is&k=20&c=J-ieaHhBhiAiuZliJNBwymxYBcYKvwUXTiUzu3Jwzik="
                 alt="Enfants bénéficiaires des actions de solidarité de BÉNIN DEBOUT"
                 fill
                 className="object-cover"
