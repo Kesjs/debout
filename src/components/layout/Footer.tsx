@@ -17,7 +17,7 @@ export default function Footer() {
                 alt="BÉNIN DEBOUT"
                 width={52}
                 height={52}
-                className="object-contain brightness-0 invert"
+                className="object-contain rounded-lg bg-white p-1"
               />
               <div>
                 <p className="font-display font-bold text-xl text-white">

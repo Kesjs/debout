@@ -10,25 +10,20 @@ export default function InstagramFloat() {
       href={SITE_CONFIG.instagram}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Suivez-nous sur Instagram"
+      aria-label={`Nous suivre sur Instagram — ${SITE_CONFIG.instagramHandle}`}
+      title={`Nous suivre sur Instagram — ${SITE_CONFIG.instagramHandle}`}
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay: 1.5, duration: 0.3, ease: "easeOut" }}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
-      className="fixed bottom-6 right-6 z-40 flex items-center gap-2.5 bg-gradient-to-br from-[#833ab4] via-[#fd1d1d] to-[#f5a623] text-white rounded-full shadow-lg shadow-pink-500/30 hover:shadow-xl hover:shadow-pink-500/40 transition-shadow duration-300 overflow-hidden group"
+      className="fixed bottom-6 right-6 z-40 group flex items-center justify-center w-12 h-12 bg-gradient-to-br from-[#833ab4] via-[#fd1d1d] to-[#f5a623] text-white rounded-full shadow-lg shadow-pink-500/30 hover:shadow-xl hover:shadow-pink-500/40 transition-all duration-300"
     >
-      {/* Version mobile — icône seule */}
-      <span className="flex items-center justify-center w-12 h-12 sm:hidden">
-        <Instagram size={20} />
-      </span>
+      <Instagram size={20} />
 
-      {/* Version desktop — icône + texte */}
-      <span className="hidden sm:flex items-center gap-2.5 px-4 py-3">
-        <Instagram size={18} />
-        <span className="text-sm font-semibold whitespace-nowrap">
-          {SITE_CONFIG.instagramHandle}
-        </span>
+      {/* Tooltip au survol */}
+      <span className="absolute right-14 bg-[#1c1c1c] text-white text-xs font-medium px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+        {SITE_CONFIG.instagramHandle}
       </span>
     </motion.a>
   );

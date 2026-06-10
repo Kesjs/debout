@@ -75,9 +75,9 @@ export default function DonSection() {
                 Composez le code suivant depuis votre téléphone
               </p>
 
-              {/* Code USSD */}
-              <div className="bg-white/10 rounded-2xl p-5 mb-4">
-                <p className="font-mono font-bold text-xl md:text-2xl text-white text-center tracking-wider break-all">
+              {/* Code USSD — une seule ligne, scroll horizontal si nécessaire */}
+              <div className="bg-white/10 rounded-2xl p-5 mb-4 overflow-x-auto">
+                <p className="font-mono font-bold text-lg text-white text-center tracking-wider whitespace-nowrap">
                   {DON_INFO.ussd}
                 </p>
               </div>

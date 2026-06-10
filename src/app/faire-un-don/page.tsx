@@ -101,8 +101,8 @@ export default function FaireUnDonPage() {
                   Composez ce code depuis votre téléphone et remplacez MONTANT
                 </p>
 
-                <div className="bg-white/10 rounded-2xl p-5 mb-4">
-                  <p className="font-mono font-bold text-xl md:text-2xl text-white text-center tracking-wider break-all leading-relaxed">
+                <div className="bg-white/10 rounded-2xl p-5 mb-4 overflow-x-auto">
+                  <p className="font-mono font-bold text-lg md:text-xl text-white text-center tracking-wider whitespace-nowrap">
                     {DON_INFO.ussd}
                   </p>
                 </div>
