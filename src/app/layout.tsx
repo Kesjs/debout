@@ -3,7 +3,6 @@ import { Poppins, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import InstagramFloat from "@/components/ui/InstagramFloat";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -62,7 +61,6 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
-        <InstagramFloat />
       </body>
     </html>
   );

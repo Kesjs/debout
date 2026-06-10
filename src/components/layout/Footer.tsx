@@ -1,7 +1,28 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, Instagram, MapPin, ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import { SITE_CONFIG, NAV_ITEMS } from "@/lib/constants";
+
+// Icône Instagram SVG — fidèle à l'original
+function InstagramIcon({ size = 18 }: { size?: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="0.75" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
 
 export default function Footer() {
   return (
@@ -91,10 +112,7 @@ export default function Footer() {
                   href={`mailto:${SITE_CONFIG.email}`}
                   className="flex items-start gap-2.5 text-sm text-white/60 hover:text-[#f5a623] transition-colors duration-150 group"
                 >
-                  <Mail
-                    size={14}
-                    className="mt-0.5 shrink-0 group-hover:text-[#f5a623]"
-                  />
+                  <Mail size={14} className="mt-0.5 shrink-0 group-hover:text-[#f5a623]" />
                   {SITE_CONFIG.email}
                 </a>
               </li>
@@ -107,18 +125,32 @@ export default function Footer() {
                   {SITE_CONFIG.phone}
                 </a>
               </li>
-              <li>
+
+              {/* Instagram — intégration soignée */}
+              <li className="pt-1">
                 <a
                   href={SITE_CONFIG.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2.5 text-sm text-white/60 hover:text-[#f5a623] transition-colors duration-150 group"
+                  className="group flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-200"
                 >
-                  <Instagram size={14} className="shrink-0 group-hover:text-[#f5a623]" />
-                  {SITE_CONFIG.instagramHandle}
+                  {/* Icône avec gradient Instagram */}
+                  <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-br from-[#833ab4] via-[#fd1d1d] to-[#f5a623] shrink-0">
+                    <InstagramIcon size={16} />
+                  </span>
+                  <div className="min-w-0">
+                    <p className="text-sm font-semibold text-white leading-tight truncate">
+                      {SITE_CONFIG.instagramHandle}
+                    </p>
+                    <p className="text-xs text-white/40 leading-tight mt-0.5">
+                      Suivez-nous
+                    </p>
+                  </div>
+                  <ArrowRight size={13} className="shrink-0 text-white/30 group-hover:text-[#f5a623] group-hover:translate-x-0.5 transition-all duration-200 ml-auto" />
                 </a>
               </li>
-              <li className="flex items-start gap-2.5 text-sm text-white/40">
+
+              <li className="flex items-start gap-2.5 text-sm text-white/40 pt-1">
                 <MapPin size={14} className="mt-0.5 shrink-0" />
                 <span>France (loi 1901) · Opérations au Bénin</span>
               </li>
