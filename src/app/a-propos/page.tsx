@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { Star, Heart, Users, Shield, Lightbulb, Scale } from "lucide-react";
 import SectionTitle from "@/components/ui/SectionTitle";
 import AnimatedSection from "@/components/ui/AnimatedSection";
@@ -43,18 +44,19 @@ export default function AProposPage() {
           </AnimatedSection>
         </div>
 
-        {/* Card chevauchante */}
+        {/* Card chevauchante — identité rapide */}
         <div className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 -mb-12 mt-10">
           <AnimatedSection>
-            <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center border border-gray-100">
+            <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center border border-gray-100">
               {[
-                { label: "Fondée en", value: "2025", sub: "France · loi 1901" },
+                { label: "Statut juridique", value: "Loi 1901", sub: "France · opérations au Bénin" },
                 { label: "Fondateur", value: "Roméo AHOSSI", sub: "Président" },
-                { label: "Caractère", value: "Apolitique", sub: "Ouvert à tous" },
+                { label: "Caractère", value: "Apolitique", sub: "Ouvert à toutes appartenances" },
+                { label: "En activité depuis", value: "2025", sub: "Bénin · présent" },
               ].map((item) => (
                 <div key={item.label}>
                   <p className="text-xs text-[#4a4a4a] uppercase tracking-wider mb-1">{item.label}</p>
-                  <p className="font-display font-bold text-xl text-[#1a5c2a]">{item.value}</p>
+                  <p className="font-display font-bold text-lg text-[#1a5c2a] leading-tight">{item.value}</p>
                   <p className="text-xs text-[#4a4a4a] mt-0.5">{item.sub}</p>
                 </div>
               ))}
@@ -63,8 +65,58 @@ export default function AProposPage() {
         </div>
       </section>
 
+      {/* Identité complète */}
+      <section className="pt-32 pb-12 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection className="text-center mb-12">
+            <SectionTitle
+              label="Qui sommes-nous"
+              title="Une association fondée par des jeunes, pour des jeunes."
+              subtitle="BÉNIN DEBOUT est axée sur le développement du capital humain de la jeunesse et les actions caritatives. Elle rassemble une génération déterminée à construire un Bénin fort par l'excellence individuelle et collective."
+              centered
+            />
+          </AnimatedSection>
+
+          {/* Fiche identité */}
+          <AnimatedSection delay={0.15}>
+            <div className="bg-[#fafafa] border border-gray-100 rounded-2xl overflow-hidden">
+              {[
+                { label: "Statut juridique", value: "Association loi 1901 (France) — opérations au Bénin" },
+                { label: "Fondateur & Président", value: "Jean de Dieu Roméo AHOSSI" },
+                { label: "Secrétaire Général", value: "Glodi MAKAVALA" },
+                { label: "Contact opérationnel", value: "benindebout.citoyen@gmail.com", isEmail: true },
+                { label: "Devise", value: "L'excellence chez les jeunes" },
+                { label: "Caractère", value: "Apolitique — ouvert à toutes appartenances" },
+                { label: "Année d'opération au Bénin", value: "2025 – présent" },
+              ].map((row, index) => (
+                <div
+                  key={row.label}
+                  className={`flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-6 px-6 py-4 ${
+                    index < 6 ? "border-b border-gray-100" : ""
+                  }`}
+                >
+                  <span className="text-xs font-semibold text-[#1a5c2a] uppercase tracking-wider shrink-0 sm:w-56">
+                    {row.label}
+                  </span>
+                  {row.isEmail ? (
+                    <a
+                      href={`mailto:${row.value}`}
+                      className="text-sm text-[#f5a623] font-medium hover:underline"
+                    >
+                      {row.value}
+                    </a>
+                  ) : (
+                    <span className="text-sm text-[#1c1c1c] font-medium">{row.value}</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* Vision & Mission */}
-      <section className="pt-32 pb-20 bg-[#fafafa]">
+      <section className="py-20 bg-[#fafafa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection direction="left">

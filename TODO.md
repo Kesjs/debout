@@ -157,9 +157,11 @@
 
 ## PHASE 8 — Déploiement
 
-- [ ] ❌ Initialiser Git (`git init` + `.gitignore` déjà présent)
-- [ ] ❌ Premier commit
-- [ ] ❌ Pousser sur GitHub
+- [x] Git initialisé
+- [x] Premier commit — 40 fichiers · 9953 lignes
+- [x] Branche renommée en `main`
+- [x] Remote origin configuré → `https://github.com/Kesjs/debout.git`
+- [x] Code poussé sur GitHub (`main`)
 - [ ] ❌ Déployer sur Vercel (connexion GitHub → déploiement automatique)
 - [ ] ❌ Configurer le domaine personnalisé (si applicable)
 - [ ] ❌ Vérifier le site en production
