@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --color-green-primary: #1a5c2a;
+  --color-green-dark: #144720;
+  --color-green-light: #f0f7f0;
+  --color-green-mid: #2d7a42;
+  --color-gold: #f5a623;
+  --color-gold-dark: #d4891a;
+  --color-off-white: #fafafa;
+  --color-ink: #1c1c1c;
+  --color-ink-light: #4a4a4a;
+  --color-border: #e8e8e8;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-off-white);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    line-height: 1.2;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .text-green-primary {
+    color: var(--color-green-primary);
+  }
+
+  .text-gold {
+    color: var(--color-gold);
+  }
+
+  .bg-green-primary {
+    background-color: var(--color-green-primary);
+  }
+
+  .bg-gold {
+    background-color: var(--color-gold);
+  }
+
+  .bg-green-light {
+    background-color: var(--color-green-light);
+  }
+
+  .border-green-primary {
+    border-color: var(--color-green-primary);
+  }
+
+  .border-gold {
+    border-color: var(--color-gold);
+  }
+}
