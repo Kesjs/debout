@@ -5,7 +5,7 @@
 export const SITE_CONFIG = {
   name: "BÉNIN DEBOUT",
   tagline: "L'excellence chez les jeunes",
-  email: "benindebout.citoyen@gmail.com",
+  email: "contactecitoyen@benindeboutbj.com",
   phone: "+229 01 51 22 57 03",
   mobileMoney: "*880*46*0151225703*MONTANT#",
   instagram: "https://www.instagram.com/benin_debout.bj",
